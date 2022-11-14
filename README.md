@@ -7,7 +7,7 @@
 
 ## 🚀 Features
 
-- Saves a Reddit users comments and optionally the parent comment or post to a JSON file
+- Saves a Reddit users comments and optionally the parent comment or post to a JSON file (limited to a max of a thousand because of PRAW)
 
 The output is as follows, for instance [Arnold Schwarzenegger](https://www.reddit.com/user/GovSchwarzenegger/):
 
