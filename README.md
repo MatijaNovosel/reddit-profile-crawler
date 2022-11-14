@@ -53,3 +53,4 @@ user_agent=
     -h,                                  Print this help text and exit
     -u, --user                           The user whose comments will be fetched
     -c, --context                        Include the parent comment text, providing further context
+    -l, --limit                          Limits the number of fetched comments
