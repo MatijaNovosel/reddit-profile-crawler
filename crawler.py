@@ -8,20 +8,23 @@ from dotenv import load_dotenv
 def main(argv):
     user = ""
     includeContext = False
+    limit = None
 
     try:
-        opts, args = getopt.getopt(argv, "hu:c", ["user="])
+        opts, args = getopt.getopt(argv, "hu:cl:", ["user=", "limit="])
     except getopt.GetoptError:
-        print(f"crawler.py -u <username> -c")
+        print(f"crawler.py -u <username> -l <limit> -c")
         sys.exit(2)
     for opt, arg in opts:
         if opt == "-h":
-            print(f"crawler.py -u <username> -c")
+            print(f"crawler.py -u <username> -l <limit> -c")
             sys.exit()
         elif opt in ("-u", "--user"):
             user = arg
         elif opt in ("-c", "--context"):
             includeContext = True
+        elif opt in ("-l", "--limit"):
+            limit = int(arg)
 
     load_dotenv()
 
@@ -38,7 +41,7 @@ def main(argv):
     data = {"user": user, "comments": []}
     ctr = 0
 
-    for comment in reddit.redditor(user).comments.new(limit=10):
+    for comment in reddit.redditor(user).comments.new(limit=limit):
         parent = comment.parent()
         obj = {}
 
