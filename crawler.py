@@ -38,7 +38,7 @@ def main(argv):
     data = {"user": user, "comments": []}
     ctr = 0
 
-    for comment in reddit.redditor(user).comments.new(limit=None):
+    for comment in reddit.redditor(user).comments.new(limit=10):
         parent = comment.parent()
         obj = {}
 
