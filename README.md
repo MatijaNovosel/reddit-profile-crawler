@@ -1,5 +1,9 @@
+<div align="center">
+  <img src="https://user-images.githubusercontent.com/36193643/201700009-88ed5cc1-8bfc-408f-99b5-0b3fe36da1b5.png" />
+</div>
+
 <h1 align=center>Reddit profile crawler</h1>
-<p align=center>A program that saves a user's profile as a JSON.</p>
+<p align=center>A program that saves a user's profile comments as a JSON.</p>
 
 ## 🚀 Features
 
