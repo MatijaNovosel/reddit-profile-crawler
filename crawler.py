@@ -24,7 +24,11 @@ def main(argv):
         elif opt in ("-c", "--context"):
             includeContext = True
         elif opt in ("-l", "--limit"):
-            limit = int(arg)
+            l = int(arg)
+            if l <= 0 or l > 999:
+                print("Invalid limit!")
+                sys.exit()
+            limit = l
 
     load_dotenv()
 
