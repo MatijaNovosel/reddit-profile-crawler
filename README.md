@@ -21,7 +21,7 @@ user_agent=
 
 ## ▶️ Options
 
-`crawler.py [OPTIONS]
+`crawler.py [OPTIONS]`
 
     -h,                                  Print this help text and exit
     -u, --user                           The user whose comments will be fetched
